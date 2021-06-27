@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        this.Host = this;
     }
 
     public StarSrvGroupClass srvGroup;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
             copyFile(this, "_struct.cpython-39.so", null);
             copyFile(this, "binascii.cpython-39.so", null);
             copyFile(this, "zlib.cpython-39.so", null);
+            copyFile(this, "test_calljava.py", null);
         } catch (Exception e) {
             System.out.println(e);
         }
